@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+
+# Robot Framework output files
+output/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE / OS specific files
+.idea/
+.DS_Store
+._*
+
+# Personal files
+personal_notes.md

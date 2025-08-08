@@ -1,0 +1,7 @@
+# Ignore common macOS and IDE files everywhere
+.DS_Store
+.idea/
+
+# Ignore personal notes and logs from the root
+/personal_notes.md
+/update_logs/

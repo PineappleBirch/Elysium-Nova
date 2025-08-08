@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE / OS specific
+.idea/
+.DS_Store
+._*
+
+# Pytest cache
+.pytest_cache/
+
+# Personal files
+personal_notes.md

@@ -1,0 +1,33 @@
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Variables ***
+${LOGIN_URL}            https://www.saucedemo.com/
+${USERNAME_FIELD}       id:user-name
+${PASSWORD_FIELD}       id:password
+${LOGIN_BUTTON}         id:login-button
+${ERROR_CONTAINER}      css:h3[data-test="error"]
+
+*** Keywords ***
+Open And Go To Login Page
+    [Arguments]    ${browser_name}    ${options_str}
+    Open Browser    url=${LOGIN_URL}    browser=${browser_name}    options=${options_str}
+
+Go To Login Page
+    Go To    ${LOGIN_URL}
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    ${USERNAME_FIELD}    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    ${PASSWORD_FIELD}    ${password}
+
+Click Login Button
+    Click Button    ${LOGIN_BUTTON}
+
+Verify Error Message Is
+    [Arguments]    ${expected_error}
+    Wait Until Element Is Visible    ${ERROR_CONTAINER}
+    Element Text Should Be          ${ERROR_CONTAINER}    ${expected_error}
