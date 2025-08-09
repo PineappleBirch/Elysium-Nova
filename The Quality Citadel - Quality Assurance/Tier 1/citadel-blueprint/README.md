@@ -8,11 +8,38 @@ The goal of this project is to showcase the ability to analyze a web application
 
 The complete test suite was designed in Notion and then exported to a self-contained HTML file for easy viewing within this repository. The test credentials used (`standard_user`, etc.) are provided publicly on the application's login page.
 
+## Setup and Installation
+
+This project is part of a larger monorepo. To clone only this specific project, please follow these steps using Git's Sparse Checkout feature.
+
+1. **Create and navigate into a new directory for the project:**
+   ```bash
+   mkdir citadel-blueprint
+   cd citadel-blueprint
+   ```
+2. **Initialize an empty Git repository:**
+   ```bash
+   git init
+   ```
+3. **Connect to the remote Elysium-Nova repository:**
+   ```bash
+   git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+   ```
+4. **Enable Sparse Checkout and define the project path:**
+   ```bash
+   git config core.sparseCheckout true
+   echo "The Quality Citadel - Quality Assurance/Tier 1/citadel-blueprint/" >> .git/info/sparse-checkout
+   ```
+5. **Pull the project files:**
+   ```bash
+   git pull origin main
+   ```
+
 ## View the Test Suite
 
 The full test suite can be viewed by opening the file below in your web browser:
 
-* **[View the Complete Test Suite (test_suite.html)](test_suite.html)**
+* **[View the Complete Test Suite (test_suite.html)](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-blueprint/test_suite.html)**
 
 ## Technologies & Tools Used
 - **Test Case Management:** Notion
@@ -29,7 +56,7 @@ Here are a few screenshots of the "Sauce Demo" website that was tested.
 ![Inventory Page](assets/inventory_page.png)
 
 **Shopping Cart Page:**
-![Inventory Page](assets/shoppingcart_page.png)
+![Shopping Cart Page](assets/shoppingcart_page.png)
 
 **Checkout Page:**
-![Inventory Page](assets/checkout_page.png)
+![Checkout Page](assets/checkout_page.png)

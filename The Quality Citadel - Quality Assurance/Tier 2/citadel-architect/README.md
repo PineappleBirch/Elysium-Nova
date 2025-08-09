@@ -18,18 +18,36 @@ This structure demonstrates a key architectural skill in test automation, result
 - **Language:** Python
 
 ## Setup and Installation
-1. **Clone the repository:**
+
+This project is part of a larger monorepo. To clone only this specific project, please follow these steps using Git's Sparse Checkout feature.
+
+1. **Create and navigate into a new directory for the project:**
    ```bash
-   git clone <your-repo-url>
-   cd project-citadel-architect
+   mkdir citadel-architect
+   cd citadel-architect
    ```
-2. **Create and activate a virtual environment:**
+2. **Initialize an empty Git repository:**
    ```bash
+   git init
+   ```
+3. **Connect to the remote Elysium-Nova repository:**
+   ```bash
+   git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+   ```
+4. **Enable Sparse Checkout and define the project path:**
+   ```bash
+   git config core.sparseCheckout true
+   echo "The Quality Citadel - Quality Assurance/Tier 2/citadel-architect/" >> .git/info/sparse-checkout
+   ```
+5. **Pull the project files:**
+   ```bash
+   git pull origin main
+   ```
+6. **Navigate to the final project directory and proceed with setup:**
+   ```bash
+   cd "The Quality Citadel - Quality Assurance/Tier 2/citadel-architect"
    python -m venv venv
-   source venv/bin/activate 
-   ```
-3. **Install the required dependencies:**
-   ```bash
+   source venv/bin/activate
    pip install -r requirements.txt
    ```
 
@@ -40,4 +58,4 @@ robot saucedemo_suite.robot
 ```
 
 ## Viewing the Report
-After the test run, open the **`report.html`** file in the `output` folder to view a summary of the results.
+After the test run is complete, open the **`report.html`** file in the `output` folder to view a summary of the results.

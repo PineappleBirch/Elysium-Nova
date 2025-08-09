@@ -22,18 +22,36 @@ The test suite includes verifications for successful status codes (200 OK, 201 C
 - **Language:** Python
 
 ## Setup and Installation
-1. **Clone the repository:**
+
+This project is part of a larger monorepo. To clone only this specific project, please follow these steps using Git's Sparse Checkout feature.
+
+1. **Create and navigate into a new directory for the project:**
    ```bash
-   git clone <this-repo-url>
+   mkdir citadel-dispatch
    cd citadel-dispatch
    ```
-2. **Create and activate a virtual environment:**
+2. **Initialize an empty Git repository:**
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate 
+   git init
    ```
-3. **Install the required dependencies:**
+3. **Connect to the remote Elysium-Nova repository:**
    ```bash
+   git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+   ```
+4. **Enable Sparse Checkout and define the project path:**
+   ```bash
+   git config core.sparseCheckout true
+   echo "The Quality Citadel - Quality Assurance/Tier 2/citadel-dispatch/" >> .git/info/sparse-checkout
+   ```
+5. **Pull the project files:**
+   ```bash
+   git pull origin main
+   ```
+6. **Navigate to the final project directory and proceed with setup:**
+   ```bash
+   cd "The Quality Citadel - Quality Assurance/Tier 2/citadel-dispatch"
+   python3 -m venv venv
+   source venv/bin/activate
    pip install -r requirements.txt
    ```
 
