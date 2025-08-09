@@ -1,19 +1,14 @@
-# Name of our workflow
 name: Run Citadel Corridor QA Tests
 
-# Configure the trigger for this workflow
 on:
   push:
-    # This workflow will only run when changes are pushed inside the citadel-corridor project folder
     paths:
       - 'The Quality Citadel - Quality Assurance/Tier 3/citadel-corridor/**'
 
-# Define the jobs that will run
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Set the default working directory for all steps in this job
     defaults:
       run:
         working-directory: ./The Quality Citadel - Quality Assurance/Tier 3/citadel-corridor
@@ -31,4 +26,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Robot Framework tests
-        run: robot saucedemo_suite.robot
+        run: robot --variable BROWSER:headlesschrome saucedemo_suite.robot
