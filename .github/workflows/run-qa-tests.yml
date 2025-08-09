@@ -1,0 +1,35 @@
+# Name of our workflow
+name: Run Citadel Architect QA Tests
+
+# Configure the trigger for this workflow
+on:
+  push:
+    branches: [ "main" ] # Runs only when code is pushed to the main branch
+
+# Define the jobs that will run
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # A sequence of tasks that will be executed
+    steps:
+      # Step 1: Check out your repository code
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up a specific version of Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Step 3: Install our project's dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+        working-directory: ./The Quality Citadel - Quality Assurance/Tier 2/citadel-architect
+
+      # Step 4: Run our Robot Framework tests
+      - name: Run Robot Framework tests
+        run: robot saucedemo_suite.robot
+        working-directory: ./The Quality Citadel - Quality Assurance/Tier 2/citadel-architect
