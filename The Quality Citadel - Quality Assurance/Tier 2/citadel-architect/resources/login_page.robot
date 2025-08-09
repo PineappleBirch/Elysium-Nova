@@ -9,9 +9,12 @@ ${LOGIN_BUTTON}         id:login-button
 ${ERROR_CONTAINER}      css:h3[data-test="error"]
 
 *** Keywords ***
-Open And Go To Login Page
-    [Arguments]    ${browser_name}    ${options_str}
-    Open Browser    url=${LOGIN_URL}    browser=${browser_name}    options=${options_str}
+Open And Configure Browser
+    [Arguments]    ${browser_name}
+    &{chrome_options_args}=    Create Dictionary
+    ...    args=    [ "--headless", "--no-sandbox", "--disable-dev-shm-usage" ]
+    Create Webdriver    ${browser_name}    options=${chrome_options_args}
+    Go To    ${LOGIN_URL}
 
 Go To Login Page
     Go To    ${LOGIN_URL}
