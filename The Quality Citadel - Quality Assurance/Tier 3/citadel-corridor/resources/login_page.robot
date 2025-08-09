@@ -1,12 +1,15 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-*** Variables ***
-${LOGIN_URL}            https://www.saucedemo.com/
-${USERNAME_FIELD}       id:user-name
-${PASSWORD_FIELD}       id:password
-${LOGIN_BUTTON}         id:login-button
-${ERROR_CONTAINER}      css:h3[data-test="error"]
+*** Keywords ***
+Open The Browser
+    [Arguments]    ${browser_name}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --no-sandbox
+    Call Method    ${options}    add_argument    --disable-dev-shm-usage
+    Create Webdriver    ${browser_name}    options=${options}
+    Go To    ${LOGIN_URL}
 
 *** Keywords ***
 Open And Go To Login Page
