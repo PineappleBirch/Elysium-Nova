@@ -26,5 +26,6 @@ Add Backpack To Cart
 
 Verify Cart Badge Count Is
     [Arguments]    ${expected_count}
+    Wait Until Element Is Visible    ${CART_BADGE}    timeout=5s
     ${actual_count}=    Get Text    ${CART_BADGE}
     Should Be Equal    ${actual_count}    ${expected_count}
