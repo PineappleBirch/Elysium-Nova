@@ -4,4 +4,4 @@
 
 # Ignore personal notes and logs from the root
 /personal_notes.md
-/update_logs/
+.update_logs/
