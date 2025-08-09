@@ -11,9 +11,11 @@ ${ERROR_CONTAINER}      css:h3[data-test="error"]
 *** Keywords ***
 Open And Configure Browser
     [Arguments]    ${browser_name}
-    &{chrome_options_args}=    Create Dictionary
-    ...    args=    [ "--headless", "--no-sandbox", "--disable-dev-shm-usage" ]
-    Create Webdriver    ${browser_name}    options=${chrome_options_args}
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}    add_argument    --headless
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
+    Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
+    Create Webdriver    ${browser_name}    options=${chrome_options}
     Go To    ${LOGIN_URL}
 
 Go To Login Page

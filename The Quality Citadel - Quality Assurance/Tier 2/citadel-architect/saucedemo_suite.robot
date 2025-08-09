@@ -3,13 +3,12 @@ Library           SeleniumLibrary
 Resource          resources/login_page.robot
 Resource          resources/inventory_page.robot
 
-Suite Setup       Run Keyword    login_page.Open And Go To Login Page    ${BROWSER}    ${CHROME_OPTIONS}
+Suite Setup       login_page.Open And Configure Browser    ${BROWSER}
 Suite Teardown    Close Browser
 Test Setup        login_page.Go To Login Page
 
 *** Variables ***
 ${BROWSER}              Chrome
-${CHROME_OPTIONS}       add_argument("--disable-features=PasswordLeakDetection")
 ${VALID_USER}           standard_user
 ${LOCKED_OUT_USER}      locked_out_user
 ${PASSWORD}             secret_sauce
