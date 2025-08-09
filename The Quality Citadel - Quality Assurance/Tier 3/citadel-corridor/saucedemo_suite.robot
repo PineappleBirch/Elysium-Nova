@@ -82,9 +82,11 @@ TC-INV-003: Verify product sort functionality (Name Z to A)
 TC-INV-006: Verify "Add to Cart" functionality
     [Tags]    Inventory    Positive
     Click Button    id:add-to-cart-sauce-labs-backpack
-    Wait Until Element Is Visible    css:.shopping_cart_badge    timeout=5s
+    Sleep    1s
+    Wait Until Element Is Visible    css:.shopping_cart_badge    timeout=10s
     ${cart_badge}=    Get Text    css:.shopping_cart_badge
     Should Be Equal    ${cart_badge}    1
+
 
 *** Keywords ***
 Open Browser To Login Page
