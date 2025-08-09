@@ -37,7 +37,7 @@ This project is part of a larger monorepo. To clone only this specific project, 
    ```
 3. **Connect to the remote Elysium-Nova repository:**
    ```bash
-   git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+   git remote add origin https://github.com/PineappleBirch/Elysium-Nova.git
    ```
 4. **Enable Sparse Checkout and define the project path:**
    ```bash
