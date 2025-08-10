@@ -23,7 +23,7 @@ Verify First Item Name Is
 
 Add Backpack To Cart
     Click Button    ${ADD_BACKPACK_BUTTON}
-    Sleep    0.5s
+    Sleep    2s
 
 Verify Cart Badge Count Is
     [Arguments]    ${expected_count}
