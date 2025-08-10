@@ -12,10 +12,6 @@ ${CART_BADGE}               css:.shopping_cart_link .shopping_cart_badge
 Verify User Is On Inventory Page
     Location Should Be    ${INVENTORY_URL}
 
-Add Backpack To Cart
-    Click Button    ${ADD_BACKPACK_BUTTON}
-    Sleep    0.5s
-
 Sort Items By
     [Arguments]    ${value}
     Select From List By Value    ${SORT_CONTAINER}    ${value}
@@ -27,6 +23,7 @@ Verify First Item Name Is
 
 Add Backpack To Cart
     Click Button    ${ADD_BACKPACK_BUTTON}
+    Sleep    0.5s
 
 Verify Cart Badge Count Is
     [Arguments]    ${expected_count}
