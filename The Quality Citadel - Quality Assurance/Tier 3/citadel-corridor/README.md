@@ -11,12 +11,13 @@ The workflow is configured to trigger automatically on every push to the `citade
 ## Workflow Details
 
 The CI pipeline is defined in the `.github/workflows/run-qa-tests.yml` file and performs the following steps:
-1.  **Trigger:** The workflow runs on every `push` to the `citadel-corridor` project folder.
+1.  **Trigger:** The workflow can be run manually (`workflow_dispatch`) or automatically on `push` to the project folder.
 2.  **Environment:** It sets up a fresh `ubuntu-latest` virtual machine.
 3.  **Checkout:** It checks out the latest version of the repository's code.
 4.  **Setup Python:** It installs the specified version of Python.
-5.  **Install Dependencies:** It installs all required libraries from the `requirements.txt` file.
-6.  **Run Tests:** It executes the full Robot Framework test suite using a headless Chrome browser instance.
+5.  **Cache Dependencies:** It caches the installed `pip` packages to speed up subsequent runs.
+6.  **Install Dependencies:** It installs all required libraries from the `requirements.txt` file, using the cache if available.
+7.  **Run Tests:** It executes the full Robot Framework test suite using a headless Chrome browser instance.
 
 ## Viewing the Results
 
