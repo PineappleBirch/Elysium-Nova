@@ -1,9 +1,17 @@
 name: Run Citadel Corridor QA Tests
 
+# For manual trigger
+
 on:
-  push:
-    paths:
-      - 'The Quality Citadel - Quality Assurance/Tier 3/citadel-corridor/**'
+  workflow_dispatch:
+
+
+# For automatic trigger when push
+
+# on:
+#  push:
+#    paths:
+#      - 'The Quality Citadel - Quality Assurance/Tier 3/citadel-corridor/**'
 
 jobs:
   build:
