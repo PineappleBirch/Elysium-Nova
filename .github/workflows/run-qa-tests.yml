@@ -1,17 +1,11 @@
 name: Run Citadel Corridor QA Tests
 
-# For manual trigger
-
 on:
-  workflow_dispatch:
-
-
-# For automatic trigger when push
-
-# on:
+  # For automatic trigger on push
 #  push:
 #    paths:
 #      - 'The Quality Citadel - Quality Assurance/Tier 3/citadel-corridor/**'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,8 +24,13 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install correct ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: pip install -r requirements.txt
