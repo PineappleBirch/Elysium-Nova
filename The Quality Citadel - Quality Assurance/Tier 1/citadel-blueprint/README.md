@@ -10,29 +10,19 @@ The complete test suite was designed in Notion and then exported to a self-conta
 
 ## Setup and Installation
 
-This project is part of a larger monorepo. To clone only this specific project, please follow these steps using Git's Sparse Checkout feature.
+This project is part of a larger monorepo. For instructions on how to clone only this specific project, please refer to the **[main repository's README.md](../../../README.md)**.
 
-1. **Create and navigate into a new directory for the project:**
+Once you have cloned the project, you can proceed with the setup:
+
+1. **Navigate to the project directory:**
    ```bash
-   mkdir citadel-blueprint
-   cd citadel-blueprint
-   ```
-2. **Initialize an empty Git repository:**
+   cd "The Quality Citadel - Quality Assurance/Tier 1/citadel-blueprint"
+   
+2. **Create and activate a virtual environment and install dependencies:**
    ```bash
-   git init
-   ```
-3. **Connect to the remote Elysium-Nova repository:**
-   ```bash
-   git remote add origin https://github.com/PineappleBirch/Elysium-Nova.git
-   ```
-4. **Enable Sparse Checkout and define the project path:**
-   ```bash
-   git config core.sparseCheckout true
-   echo "The Quality Citadel - Quality Assurance/Tier 1/citadel-blueprint/" >> .git/info/sparse-checkout
-   ```
-5. **Pull the project files:**
-   ```bash
-   git pull origin main
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
    ```
 
 ## View the Test Suite

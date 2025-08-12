@@ -17,18 +17,19 @@ The test script, or `locustfile.py`, defines multiple user behaviors with differ
 - **Language:** Python
 
 ## Setup and Installation
-1. **Clone the repository:**
+
+This project is part of a larger monorepo. For instructions on how to clone only this specific project, please refer to the **[main repository's README.md](../../../README.md)**.
+
+Once you have cloned the project, you can proceed with the setup:
+
+1. **Navigate to the project directory:**
    ```bash
-   git clone <your-repo-url>
-   cd project-citadel-siege
-   ```
-2. **Create and activate a virtual environment:**
+   cd "The Quality Citadel - Quality Assurance/Tier 3/citadel-siege"
+   
+2. **Create and activate a virtual environment and install dependencies:**
    ```bash
    python3 -m venv venv
    source venv/bin/activate
-   ```
-3. **Install the required dependencies:**
-   ```bash
    pip install -r requirements.txt
    ```
 

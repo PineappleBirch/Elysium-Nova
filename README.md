@@ -39,3 +39,60 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 | **[Project: Citadel Guard](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-guard/)** | T1 | An initial automated UI test suite for a web application's login functionality, built with Robot Framework. |
 | **[Project: Citadel Architect](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%202/citadel-architect/)** | T2 | A refactored UI test suite implementing the professional Page Object Model (POM) for enhanced maintainability. |
 | **[Project: Citadel Dispatch](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%202/citadel-dispatch/)** | T2 | An automated API test suite using Python and `pytest` to verify the functionality of a public REST API. |
+
+## Setup and Installation
+
+This repository is a "monorepo," meaning it contains multiple, independent projects. You can either clone the entire repository or use Git's Sparse Checkout feature to download only a specific project or tier.
+
+### 1. Cloning the Entire Portfolio
+
+This is the simplest method and is recommended if you want to explore all the projects.
+
+```bash
+git clone [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+cd Elysium-Nova
+```
+Each project is self-contained in its respective sub-folder and includes its own `README.md` with instructions for setting up its environment and running it.
+
+### 2. Cloning a Single Project
+
+If you only want to download a specific project (e.g., `iris-core`), you can use Git's Sparse Checkout feature.
+
+```bash
+# Create a folder for the project and navigate into it
+mkdir iris-core-project
+cd iris-core-project
+
+# Initialize Git and connect to the remote repository
+git init
+git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+
+# Enable Sparse Checkout and specify the project path
+git config core.sparseCheckout true
+echo "The MLOps Forge - Machine Learning/Tier 1/iris-core/" >> .git/info/sparse-checkout
+
+# Pull the specified project files
+git pull origin main
+```
+This will create a folder containing only the `iris-core` project and its files.
+
+### 3. Cloning an Entire Tier
+
+You can also use Sparse Checkout to download all projects within a specific tier (e.g., all Tier 1 projects in "The Quality Citadel").
+
+```bash
+# Create a folder for the projects and navigate into it
+mkdir qa-tier-1-projects
+cd qa-tier-1-projects
+
+# Initialize Git and connect to the remote repository
+git init
+git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+
+# Enable Sparse Checkout and specify the tier path
+git config core.sparseCheckout true
+echo "The Quality Citadel - Quality Assurance/Tier 1/" >> .git/info/sparse-checkout
+
+# Pull all project files from that tier
+git pull origin main
+```

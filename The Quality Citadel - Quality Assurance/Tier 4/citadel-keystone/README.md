@@ -21,12 +21,15 @@ The architecture separates concerns into distinct layers: core framework logic, 
 - **Language:** Python
 
 ## Setup and Installation
-This project is part of a larger monorepo. Please refer to the main repository's `README.md` for instructions on cloning individual projects.
+
+This project is part of a larger monorepo. For instructions on how to clone only this specific project, please refer to the **[main repository's README.md](../../../README.md)**.
+
+Once you have cloned the project, you can proceed with the setup:
 
 1. **Navigate to the project directory:**
    ```bash
    cd "The Quality Citadel - Quality Assurance/Tier 4/citadel-keystone"
-   ```
+   
 2. **Create and activate a virtual environment and install dependencies:**
    ```bash
    python3 -m venv venv

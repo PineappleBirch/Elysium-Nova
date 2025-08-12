@@ -31,34 +31,17 @@ The primary goal is to demonstrate the core principles of serving a model as a R
 
 ## Setup and Installation
 
-This project is part of a larger monorepo. To clone only this specific project, please follow these steps using Git's Sparse Checkout feature.
+This project is part of a larger monorepo. For instructions on how to clone only this specific project, please refer to the **[main repository's README.md](../../../README.md)**.
 
-1. **Create and navigate into a new directory for the project:**
-   ```bash
-   mkdir iris-core
-   cd iris-core
-   ```
-2. **Initialize an empty Git repository:**
-   ```bash
-   git init
-   ```
-3. **Connect to the remote Elysium-Nova repository:**
-   ```bash
-   git remote add origin https://github.com/PineappleBirch/Elysium-Nova.git
-   ```
-4. **Enable Sparse Checkout and define the project path:**
-   ```bash
-   git config core.sparseCheckout true
-   echo "The MLOps Forge - Machine Learning/Tier 1/iris-core/" >> .git/info/sparse-checkout
-   ```
-5. **Pull the project files:**
-   ```bash
-   git pull origin main
-   ```
-6. **Navigate to the final project directory and proceed with setup:**
+Once you have cloned the project, you can proceed with the setup:
+
+1. **Navigate to the project directory:**
    ```bash
    cd "The MLOps Forge - Machine Learning/Tier 1/iris-core"
-   python -m venv venv
+   
+2. **Create and activate a virtual environment and install dependencies:**
+   ```bash
+   python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    ```
