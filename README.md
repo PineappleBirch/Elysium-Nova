@@ -49,7 +49,7 @@ This repository is a "monorepo," meaning it contains multiple, independent proje
 This is the simplest method and is recommended if you want to explore all the projects.
 
 ```bash
-git clone [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+git clone https://github.com/PineappleBirch/Elysium-Nova.git
 cd Elysium-Nova
 ```
 Each project is self-contained in its respective sub-folder and includes its own `README.md` with instructions for setting up its environment and running it.
@@ -65,7 +65,7 @@ cd iris-core-project
 
 # Initialize Git and connect to the remote repository
 git init
-git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
+git remote add origin https://github.com/PineappleBirch/Elysium-Nova.git
 
 # Enable Sparse Checkout and specify the project path
 git config core.sparseCheckout true
@@ -87,11 +87,31 @@ cd qa-tier-1-projects
 
 # Initialize Git and connect to the remote repository
 git init
-git remote add origin [https://github.com/PineappleBirch/Elysium-Nova.git](https://github.com/PineappleBirch/Elysium-Nova.git)
-
+git remote add origin https://github.com/PineappleBirch/Elysium-Nova.git
 # Enable Sparse Checkout and specify the tier path
 git config core.sparseCheckout true
 echo "The Quality Citadel - Quality Assurance/Tier 1/" >> .git/info/sparse-checkout
+
+# Pull all project files from that tier
+git pull origin main
+```
+
+### 4. Cloning an Entire Discipline
+
+You can also use Sparse Checkout to download all projects within a specific discipline category (e.g., the whole "The Quality Citadel" group).
+
+```bash
+# Create a folder for the projects and navigate into it
+mkdir qa-projects
+cd qa-projects
+
+# Initialize Git and connect to the remote repository
+git init
+git remote add origin https://github.com/PineappleBirch/Elysium-Nova.git
+
+# Enable Sparse Checkout and specify the tier path
+git config core.sparseCheckout true
+echo "The Quality Citadel - Quality Assurance/" >> .git/info/sparse-checkout
 
 # Pull all project files from that tier
 git pull origin main
