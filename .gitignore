@@ -6,3 +6,9 @@
 /personal_notes.md
 .update_logs/
 structure_Elysium-Nova.txt
+
+# Ignore CSV tables of projects
+.tables/
+
+# Ignore PROJECT_ROADMAP until production ready
+PROJECT_ROADMAP.md
