@@ -64,6 +64,7 @@ Once you have cloned the project, you can proceed with the setup:
 ![Login Page Bug 1](assets/login_page_bug_1.png)
 
 Diff:
+
 ![Login Page Diff 1](assets/login_page_diff_1.png)
 
 **Detected Bug 2 (Hidden Element):**
@@ -71,6 +72,7 @@ Diff:
 ![Login Page Bug 2](assets/login_page_bug_2.png)
 
 Diff:
+
 ![Login Page Diff 2](assets/login_page_diff_2.png)
 
 <br>
@@ -86,4 +88,5 @@ Diff:
 ![Main App Page Bug](assets/main_app_page_bug.png)
 
 Diff:
+
 ![Main App Page Diff](assets/main_app_page_diff.png)
