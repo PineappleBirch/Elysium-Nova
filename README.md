@@ -42,6 +42,7 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 | **[Project: Citadel Corridor](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-corridor/)** | T3 | A CI/CD pipeline using GitHub Actions to automatically run the 'Citadel Architect' test suite. |
 | **[Project: Citadel Siege](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-siege/)** | T3 | A performance test suite using Locust to simulate user load on a public API. |
 | **[Project: Citadel Keystone](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-keystone/)** | T4 | A professional, hybrid test automation framework built from scratch using Python and pytest. |
+| **[Project: Citadel Watchtower](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-watchtower/)** | T4 | An automated visual regression suite using Python, Selenium, and Pixelmatch to detect UI bugs by comparing screenshots against baseline images. |
 
 ## Setup and Installation
 
