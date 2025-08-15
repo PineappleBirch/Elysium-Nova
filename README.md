@@ -43,6 +43,8 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 | **[Project: Citadel Siege](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-siege/)** | T3 | A performance test suite using Locust to simulate user load on a public API. |
 | **[Project: Citadel Keystone](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-keystone/)** | T4 | A professional, hybrid test automation framework built from scratch using Python and pytest. |
 | **[Project: Citadel Watchtower](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-watchtower/)** | T4 | An automated visual regression suite using Python, Selenium, and Pixelmatch to detect UI bugs by comparing screenshots against baseline images. |
+| **[Project: Citadel Watchtower](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%205/citadel-watchtower/)** | T5 | A "test data factory" built with Python and the Faker library to programmatically generate large amounts of realistic, structured fake data for robust testing scenarios. |
+| **[Project: Citadel Watchtower](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%205/citadel-watchtower/)** | T5 | A web-based "test coverage visualizer" using Python, Flask, and pandas to parse output.xml test reports and display the results in a clean, user-friendly dashboard. |
 
 ## Setup and Installation
 
