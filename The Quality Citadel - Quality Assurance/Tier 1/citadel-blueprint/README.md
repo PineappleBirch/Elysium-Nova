@@ -29,7 +29,7 @@ Once you have cloned the project, you can proceed with the setup:
 
 The full test suite can be viewed by opening the file below in your web browser:
 
-* **[View the Complete Test Suite (test_suite.html)](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-blueprint/test_suite.html)**
+* **[View the Complete Test Suite (test_suite.html)](test_suite.html)**
 
 ## Technologies & Tools Used
 - **Test Case Management:** Notion
