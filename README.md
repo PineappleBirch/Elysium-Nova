@@ -33,17 +33,17 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 
 ### The Quality Citadel (Manual & Automated Testing - QA)
 
-| Project Name | Tier | Description |
-| --- | --- | --- |
-| **[Project: Citadel Blueprint](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-blueprint/)** | T1 | A comprehensive manual test suite designed for a public e-commerce website. |
-| **[Project: Citadel Guard](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-guard/)** | T1 | An initial automated UI test suite for a web application's login functionality, built with Robot Framework. |
-| **[Project: Citadel Architect](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%202/citadel-architect/)** | T2 | A refactored UI test suite implementing the professional Page Object Model (POM) for enhanced maintainability. |
-| **[Project: Citadel Dispatch](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%202/citadel-dispatch/)** | T2 | An automated API test suite using Python and pytest to verify the functionality of a public REST API. |
-| **[Project: Citadel Corridor](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-corridor/)** | T3 | A CI/CD pipeline using GitHub Actions to automatically run the 'Citadel Architect' test suite. |
-| **[Project: Citadel Siege](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-siege/)** | T3 | A performance test suite using Locust to simulate user load on a public API. |
-| **[Project: Citadel Keystone](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-keystone/)** | T4 | A professional, hybrid test automation framework built from scratch using Python and pytest. |
-| **[Project: Citadel Watchtower](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-watchtower/)** | T4 | An automated visual regression suite using Python, Selenium, and Pixelmatch to detect UI bugs by comparing screenshots against baseline images. |
-| **[Project: Citadel Alchemist](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%205/citadel-alchemsit/)** | T5 | A "test data factory" built with Python and the Faker library to programmatically generate large amounts of realistic, structured fake data for robust testing scenarios. |
+| Project Name                                                                                                            | Tier | Description |
+|-------------------------------------------------------------------------------------------------------------------------| --- | --- |
+| **[Project: Citadel Blueprint](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-blueprint/)**       | T1 | A comprehensive manual test suite designed for a public e-commerce website. |
+| **[Project: Citadel Guard](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%201/citadel-guard/)**               | T1 | An initial automated UI test suite for a web application's login functionality, built with Robot Framework. |
+| **[Project: Citadel Architect](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%202/citadel-architect/)**       | T2 | A refactored UI test suite implementing the professional Page Object Model (POM) for enhanced maintainability. |
+| **[Project: Citadel Dispatch](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%202/citadel-dispatch/)**         | T2 | An automated API test suite using Python and pytest to verify the functionality of a public REST API. |
+| **[Project: Citadel Corridor](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-corridor/)**         | T3 | A CI/CD pipeline using GitHub Actions to automatically run the 'Citadel Architect' test suite. |
+| **[Project: Citadel Siege](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%203/citadel-siege/)**               | T3 | A performance test suite using Locust to simulate user load on a public API. |
+| **[Project: Citadel Keystone](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-keystone/)**         | T4 | A professional, hybrid test automation framework built from scratch using Python and pytest. |
+| **[Project: Citadel Watchtower](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%204/citadel-watchtower/)**     | T4 | An automated visual regression suite using Python, Selenium, and Pixelmatch to detect UI bugs by comparing screenshots against baseline images. |
+| **[Project: Citadel Alchemist](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%205/citadel-alchemist/)**       | T5 | A "test data factory" built with Python and the Faker library to programmatically generate large amounts of realistic, structured fake data for robust testing scenarios. |
 | **[Project: Citadel Cartographer](./The%20Quality%20Citadel%20-%20Quality%20Assurance/Tier%205/citadel-cartographer/)** | T5 | A web-based "test coverage visualizer" using Python, Flask, and pandas to parse output.xml test reports and display the results in a clean, user-friendly dashboard. |
 
 
