@@ -19,7 +19,9 @@ The `Dockerfile` provides a clear, step-by-step recipe for building the applicat
 - **Server:** Uvicorn
 
 ## Setup and Usage
-This project is part of a larger monorepo. Please refer to the main repository's `README.md` for instructions on cloning individual projects.
+This project is part of a larger monorepo. For instructions on how to clone only this specific project, please refer to the **[main repository's README.md](../../../README.md)**.
+
+Once you have cloned the project, you can proceed with the setup:
 
 1. **Prerequisites:** You must have Docker Desktop installed and running.
 2. **Navigate to the project directory:**
