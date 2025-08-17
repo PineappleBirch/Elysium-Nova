@@ -28,8 +28,9 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 ### The MLOps Forge (Machine Learning Engineering)
 
 | Project Name | Tier | Description |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | **[Project: Iris Core](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%201/iris-core/)** | T1 | A simple but robust API built with FastAPI to serve a Scikit-learn classification model. |
+| **[Project: Iris Vase](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%201/iris-vase/)** | T1 | A containerized version of the "Iris Core" API, packaged using Docker to create a portable and scalable application. |
 
 ### The Quality Citadel (Manual & Automated Testing - QA)
 
