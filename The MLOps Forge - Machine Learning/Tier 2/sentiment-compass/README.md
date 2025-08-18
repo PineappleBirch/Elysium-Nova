@@ -30,21 +30,16 @@ Here is a preview of the application's user interface:
 - **PyTorch:** As the backend framework for the transformer model.
 - **Docker:** For containerizing the application for portable deployment.
 
-## 4. Setup and Usage
 
-To run this project locally, follow these steps:
+## 4. Setup and Installation
 
-### 4.1. Prerequisites
+This project is part of a larger monorepo. For instructions on how to clone only this specific project, please refer to the **[main repository's README.md](../../../README.md)**.
 
-- Python 3.11 or higher
-- `pip` and `venv`
+Once you have the project directory, you can proceed with the local setup:
 
-### 4.2. Installation
-
-1.  **Clone the repository and navigate to the project directory:**
+1.  **Navigate to the project directory:**
     ```bash
-    git clone [https://github.com/your-username/Elysium-Nova.git](https://github.com/your-username/Elysium-Nova.git)
-    cd "Elysium-Nova/The MLOps Forge - Machine Learning/Tier 2/sentiment-compass/"
+    cd "The MLOps Forge - Machine Learning/Tier 2/sentiment-compass"
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -58,7 +53,7 @@ To run this project locally, follow these steps:
     pip install -r requirements.txt
     ```
 
-### 4.3. Running the Application
+## 5. Running the Application
 
 1.  **Start the Streamlit server:**
     ```bash
@@ -67,7 +62,7 @@ To run this project locally, follow these steps:
 
 2.  The application will automatically open in a new browser tab.
 
-## 5. Dockerization
+## 6. Docker Deployment
 
 This application is designed to be deployed using Docker.
 
@@ -81,4 +76,4 @@ This application is designed to be deployed using Docker.
     docker run -p 8501:8501 sentiment-compass
     ```
 
-3.  Access the application in your browser at `http://localhost:8501`.
+3.  Access the application in your browser at `http://localhost:8501`
