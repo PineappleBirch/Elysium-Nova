@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.idea/
+*.iml
+
+# macOS system files
+.DS_Store
+._*
+
+# Build artifacts
+build/
+dist/
+*.egg-info
+
+# Private notes & outputs
+personal_notes.md
+model.joblib
+metrics.json

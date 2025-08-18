@@ -31,6 +31,8 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 | --- | --- | --- |
 | **[Project: Iris Core](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%201/iris-core/)** | T1 | A simple but robust API built with FastAPI to serve a Scikit-learn classification model. |
 | **[Project: Iris Vase](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%201/iris-vase/)** | T1 | A containerized version of the "Iris Core" API, packaged using Docker to create a portable and scalable application. |
+| **[Project: Sentiment Compass](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%202/sentiment-compass/)** | T2 | An interactive web app using a pre-trained Hugging Face model and Streamlit to perform real-time sentiment analysis, containerized for deployment with Docker. |
+| **[Project: Training Crucible](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%202/training-crucible/)** | T2 | An automated Python script that orchestrates a complete machine learning workflow, from data ingestion and processing to saving a trained model and its performance metrics. |
 
 ### The Quality Citadel (Manual & Automated Testing - QA)
 
