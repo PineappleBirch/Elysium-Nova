@@ -1,0 +1,28 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.idea/
+*.iml
+
+# macOS system files
+.DS_Store
+._*
+
+# --- Project Specific ---
+# Local vector database storage
+vector_db/
+
+# Local data files (e.g., PDFs)
+data/
+
+# Environment variables
+.env
+
+# Private notes
+personal_notes.md
