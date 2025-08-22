@@ -14,10 +14,12 @@ __pycache__/
 .DS_Store
 ._*
 
-# DVC directory (DVC manages its own data ignores)
-.dvc/
+# DVC files
+.dvc/cache
+.dvc/tmp
+.dvc/config.local
 
-# Generated artifacts from the pipeline
+# Generated artifacts from our pipeline
 output/
 
 # Environment variables

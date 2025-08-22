@@ -1,15 +1,81 @@
-name: DVC Path Debugger
+name: MLOps Pipeline for Pipe-Bellows
 
 on:
+  # This enables automatic runs
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'The MLOps Forge - Machine Learning/Tier 3/pipe-bellows/**'
+
+  # Running the workflow manually from the GitHub Actions tab.
   workflow_dispatch:
 
 jobs:
-  debug-paths:
+  train-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: List all files in the project directory
-        run: ls -lR
-        working-directory: "The MLOps Forge - Machine Learning/Tier 3/pipe-bellows"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('The MLOps Forge - Machine Learning/Tier 3/pipe-bellows/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r "The MLOps Forge - Machine Learning/Tier 3/pipe-bellows/requirements.txt"
+
+      - name: Set up DVC
+        uses: iterative/setup-dvc@v1
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1 # Make sure this matches your S3 bucket's region
+
+      - name: Pull Data with DVC
+        run: dvc pull -R
+        working-directory: The MLOps Forge - Machine Learning/Tier 3/pipe-bellows
+
+      - name: Run Training Pipeline
+        run: python src/main.py
+        working-directory: The MLOps Forge - Machine Learning/Tier 3/pipe-bellows
+
+      - name: Validate Model Performance
+        run: python validate.py
+        working-directory: The MLOps Forge - Machine Learning/Tier 3/pipe-bellows
+
+      - name: Version New Artifacts with DVC
+        if: success()
+        run: dvc add output
+        working-directory: The MLOps Forge - Machine Learning/Tier 3/pipe-bellows
+
+      - name: Push New Artifacts to DVC Remote (S3)
+        if: success()
+        run: dvc push
+        working-directory: The MLOps Forge - Machine Learning/Tier 3/pipe-bellows
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Commit and Push DVC Pointer
+        if: success()
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "feat(mlops): Train and version new model artifacts"
+          file_pattern: "The MLOps Forge - Machine Learning/Tier 3/pipe-bellows/output.dvc The MLOps Forge - Machine Learning/Tier 3/pipe-bellows/.gitignore"
+          commit_user_name: GitHub Actions Bot
+          commit_user_email: actions@github.com
