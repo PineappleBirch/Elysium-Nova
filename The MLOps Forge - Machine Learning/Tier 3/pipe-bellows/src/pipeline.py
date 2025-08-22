@@ -37,7 +37,7 @@ def train_model(X_train, y_train):
     Initializes and trains a Logistic Regression model.
     """
     print("INFO: Training Logistic Regression model...")
-    model = LogisticRegression(max_iter=200, random_state=43)
+    model = LogisticRegression(max_iter=200, random_state=42)
     model.fit(X_train, y_train)
     print("INFO: Model training complete.")
     return model
