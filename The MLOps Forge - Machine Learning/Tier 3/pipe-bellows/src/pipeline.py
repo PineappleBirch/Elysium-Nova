@@ -1,26 +1,21 @@
-import joblib
-import json
-import os
 import pandas as pd
-from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+import joblib
+import json
+import os
 
 
 def get_data():
     """
-    Loads the Iris dataset from scikit-learn.
-
-    Returns:
-        tuple: A tuple containing:
-            - X (pd.DataFrame): The feature data.
-            - y (pd.Series): The target data.
+    Loads the Iris dataset from a local CSV file.
     """
-    print("INFO: Loading Iris dataset...")
-    iris = load_iris()
-    X = pd.DataFrame(iris.data, columns=iris.feature_names)
-    y = pd.Series(iris.target, name='target')
+    print("INFO: Loading Iris dataset from data/iris.csv...")
+    # The path needs to be relative to the root of the project, not src/
+    df = pd.read_csv("data/iris.csv")
+    X = df.drop("target", axis=1)
+    y = df["target"]
     print("INFO: Dataset loaded successfully.")
     return X, y
 
@@ -28,14 +23,6 @@ def get_data():
 def split_data(X, y):
     """
     Splits the feature and target data into training and testing sets.
-
-    Args:
-        X (pd.DataFrame): The feature data.
-        y (pd.Series): The target data.
-
-    Returns:
-        tuple: A tuple containing the split data:
-               (X_train, X_test, y_train, y_test).
     """
     print("INFO: Splitting data into training and testing sets...")
     X_train, X_test, y_train, y_test = train_test_split(
@@ -48,16 +35,8 @@ def split_data(X, y):
 def train_model(X_train, y_train):
     """
     Initializes and trains a Logistic Regression model.
-
-    Args:
-        X_train (pd.DataFrame): The training feature data.
-        y_train (pd.Series): The training target data.
-
-    Returns:
-        The trained model object.
     """
     print("INFO: Training Logistic Regression model...")
-    # We set max_iter to 200 to ensure the model converges
     model = LogisticRegression(max_iter=200, random_state=42)
     model.fit(X_train, y_train)
     print("INFO: Model training complete.")
@@ -66,13 +45,7 @@ def train_model(X_train, y_train):
 
 def evaluate_and_save_artifacts(model, X_test, y_test):
     """
-    Evaluates the model on the test set and saves the performance
-    metrics and the model artifact.
-
-    Args:
-        model: The trained model object.
-        X_test (pd.DataFrame): The testing feature data.
-        y_test (pd.Series): The testing target data.
+    Evaluates the model and saves the performance metrics and model artifact.
     """
     print("INFO: Evaluating model performance...")
     predictions = model.predict(X_test)
@@ -94,15 +67,3 @@ def evaluate_and_save_artifacts(model, X_test, y_test):
     model_path = os.path.join(output_dir, "model.joblib")
     joblib.dump(model, model_path)
     print(f"INFO: Model saved to '{model_path}'")
-
-
-if __name__ == '__main__':
-    X_data, y_data = get_data()
-
-    X_train, X_test, y_train, y_test = split_data(X_data, y_data)
-
-    model = train_model(X_train, y_train)
-
-    evaluate_and_save_artifacts(model, X_test, y_test)
-
-    print("\n--- Pipeline Test Run Complete ---")

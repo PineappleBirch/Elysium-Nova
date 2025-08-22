@@ -1,0 +1,27 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDE configuration files (PyCharm)
+.idea/
+*.iml
+
+# macOS system files
+.DS_Store
+._*
+
+# DVC directory (DVC manages its own data ignores)
+.dvc/
+
+# Generated artifacts from the pipeline
+output/
+
+# Environment variables
+.env
+
+# Private notes
+personal_notes.md
