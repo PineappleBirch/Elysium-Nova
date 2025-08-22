@@ -1,5 +1,3 @@
-# train.py
-
 # Dependencies
 import joblib
 from sklearn.datasets import load_iris

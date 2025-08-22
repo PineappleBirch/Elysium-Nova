@@ -34,11 +34,9 @@ def main():
 
     # 3. Create Embeddings and Store in ChromaDB
     print(f"Creating embeddings with '{MODEL_NAME}' model...")
-    # This will download the model from Hugging Face on the first run
     embedding_model = HuggingFaceEmbeddings(model_name=MODEL_NAME)
 
     print(f"Storing embeddings in ChromaDB at '{DB_PATH}'...")
-    # The from_documents method handles embedding and storing in one step
     vector_store = Chroma.from_documents(
         documents=splits,
         embedding=embedding_model,

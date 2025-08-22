@@ -57,7 +57,6 @@ def main():
     # Invoke the chain
     response = retrieval_chain.invoke({"input": question})
 
-    # Print the answer
     print("\n--- Answer ---")
     print(response["answer"])
     print("----------------")

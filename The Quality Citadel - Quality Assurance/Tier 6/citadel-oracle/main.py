@@ -33,7 +33,7 @@ if __name__ == "__main__":
     interval = 1
 
     # Scheduling the health_check function to run every 1 minute
-    # For a real-world scenario, you might change this to every 5 or 10 minutes.
+    # For a real-world scenario - might be changed this to every 5 or 10 minutes.
     schedule.every(interval).minutes.do(health_check, url=targets['main_site'])
 
     print("--- Starting continuous monitoring... Press CTRL+C to stop. ---")

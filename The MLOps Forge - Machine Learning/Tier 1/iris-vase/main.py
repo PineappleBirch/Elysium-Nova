@@ -1,5 +1,3 @@
-# main.py
-
 # Dependencies
 from fastapi import FastAPI
 import joblib

@@ -25,10 +25,8 @@ def parse_robot_output(xml_file_path):
             "Tags": ", ".join(tags) if tags else "N/A"
         })
 
-    # --- Start of new code ---
     # Sort the list of dictionaries by the "Test Name"
     test_data.sort(key=lambda x: x['Test Name'])
-    # --- End of new code ---
 
     return pd.DataFrame(test_data)
 
