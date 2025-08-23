@@ -34,6 +34,7 @@ For a detailed overview of all planned projects, please see the [**Full Project 
 | **[Project: Sentiment Compass](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%202/sentiment-compass/)** | T2 | An interactive web app using a pre-trained Hugging Face model and Streamlit to perform real-time sentiment analysis, containerized for deployment with Docker. |
 | **[Project: Training Crucible](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%202/training-crucible/)** | T2 | An automated Python script that orchestrates a complete machine learning workflow, from data ingestion and processing to saving a trained model and its performance metrics. |
 | **[Project: Vector Weaver](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%203/vector-weaver/)** | T3 | A complete RAG (Retrieval-Augmented Generation) system built with FastAPI and LangChain that allows a user to ask natural language questions about their own documents. |
+| **[Project: Pipe Bellows](./The%20MLOps%20Forge%20-%20Machine%20Learning/Tier%203/pipe-bellows/)** | T3 | A CI/CD pipeline using GitHub Actions and DVC to automatically train, validate, and version a machine learning model and its data. |
 
 ### The Quality Citadel (Manual & Automated Testing - QA)
 
